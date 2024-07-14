@@ -53,6 +53,42 @@ export const members = {
     name: "安養寺 姫芽",
     avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/09_thumb.png",
   },
+  nozomi: {
+    name: "楡井 希実",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/01_cast.jpg",
+  },
+  kokona: {
+    name: "野中 ここな",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/02_cast.jpg",
+  },
+  nina: {
+    name: "花宮 初奈",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/03_cast.jpg",
+  },
+  kotoko: {
+    name: "佐々木 琴子",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/04_cast.jpg",
+  },
+  kanna: {
+    name: "菅 叶和",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/05_cast.jpg",
+  },
+  kona: {
+    name: "月音 こな",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/06_cast.jpg",
+  },
+  hina: {
+    name: "櫻井 陽菜",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/07_cast.jpg",
+  },
+  fuuka: {
+    name: "葉山 風花",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/08_cast.jpg",
+  },
+  rin: {
+    name: "来栖 りん",
+    avatar: "https://www.lovelive-anime.jp/hasunosora/shared/img/member/09_cast.jpg",
+  },
 };
 
 export function isMember(member: string): member is keyof typeof members {
