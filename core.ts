@@ -8,14 +8,12 @@ await load({ export: true });
 const BOT_KEY = Deno.env.get("DISCORD_PUBLIC_KEY")!;
 const BOT_TOKEN = Deno.env.get("DISCORD_BOT_TOKEN")!;
 const APPLICATION_ID = Deno.env.get("DISCORD_APPLICATION_ID")!;
-const GUILD_ID = Deno.env.get("DISCORD_GUILD_ID")!;
-if (!BOT_KEY || !BOT_TOKEN || !APPLICATION_ID || !GUILD_ID)
+if (!BOT_KEY || !BOT_TOKEN || !APPLICATION_ID)
   console.warn("Missing environment variables");
 export const globals = {
   BOT_KEY,
   BOT_TOKEN,
   APPLICATION_ID,
-  GUILD_ID,
 };
 
 export const members = {
