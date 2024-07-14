@@ -28,7 +28,6 @@ Deno.serve(async (req) => {
     }
     case DC.InteractionType.ApplicationCommand: {
       const { data } = interaction as DC.APIApplicationCommandInteraction;
-      console.log(JSON.stringify(data, undefined, 2));
       const { name, options } = data as DC.APIChatInputApplicationCommandInteractionData;
       const content = (options![0] as DC.APIApplicationCommandInteractionDataBasicOption).value as string;
       if (!isMember(name))
