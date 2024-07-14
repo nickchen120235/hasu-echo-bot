@@ -12,5 +12,5 @@ if (!BOT_TOKEN || !APPLICATION_ID || !GUILD_ID)
 
 console.log("Updating slash commands...");
 const rest = new REST({ version: "10" }).setToken(BOT_TOKEN);
-const res = await rest.put(Routes.applicationGuildCommands(APPLICATION_ID, GUILD_ID), { body: commands });
+const res = await rest.put(Routes.applicationCommands(APPLICATION_ID), { body: commands });
 console.log(`Registed ${(res as unknown[]).length} commands`);
