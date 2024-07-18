@@ -36,8 +36,8 @@ export async function sendMessageAs(interactionToken: string, channel: string, m
   });
   // delete webhook
   await rest.delete(DC.Routes.webhook(id, token));
-  // delete replied message after 2 seconds
-  await kv.enqueue(interactionToken, { delay: 2000 });
+  // delete replied message after 5 seconds
+  await kv.enqueue(interactionToken, { delay: 5000 });
 }
 
 // save the message for 30 days

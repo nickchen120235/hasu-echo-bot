@@ -38,7 +38,7 @@ Deno.serve(async (req) => {
         return createResponse(200, {
           type: DC.InteractionResponseType.ChannelMessageWithSource,
           data: {
-            content: "OK",
+            content: "OK (這條訊息將在5秒後自動消失)",
             flags: DC.MessageFlags.Ephemeral,
           }
         });
