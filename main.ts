@@ -33,7 +33,7 @@ Deno.serve(async (req) => {
       if (!isMember(name))
         return createResponse(400, { error: "Invalid command" });
       else {
-        await logMessage(interaction.guild_id ?? "Unknown Guild", interaction.channel.name ?? "Unknown Channel", interaction.user?.id ?? "Unknown User", content);
+        await logMessage(interaction.guild_id ?? "Unknown Guild", interaction.channel.name ?? "Unknown Channel", interaction.member?.user.username ?? "Unknown User", content);
         await sendMessageAs(interaction.token, interaction.channel.id, name, content);
         return createResponse(200, {
           type: DC.InteractionResponseType.ChannelMessageWithSource,
