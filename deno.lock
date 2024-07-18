@@ -3,6 +3,7 @@
   "packages": {
     "specifiers": {
       "npm:@discordjs/rest@^2.2.0": "npm:@discordjs/rest@2.2.0",
+      "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:discord-api-types@^0.37.67": "npm:discord-api-types@0.37.67",
       "npm:discord-interactions@^3.4.0": "npm:discord-interactions@3.4.0"
     },
@@ -39,6 +40,10 @@
       },
       "@sapphire/snowflake@3.5.3": {
         "integrity": "sha512-jjmJywLAFoWeBi1W7994zZyiNWPIiqRRNAmSERxyg93xRGzNYvGjlZ0gR6x0F4gPRi2+0O6S71kOZYyr3cxaIQ==",
+        "dependencies": {}
+      },
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
         "dependencies": {}
       },
       "@vladfrangu/async_event_emitter@2.2.4": {
@@ -79,9 +84,13 @@
       }
     }
   },
+  "redirects": {
+    "https://deno.land/x/ulid/mod.ts": "https://deno.land/x/ulid@v0.3.0/mod.ts"
+  },
   "remote": {
     "https://deno.land/std@0.213.0/dotenv/mod.ts": "46cc7a78cf3f7ba533c8c9b90407a365f925be332ebdc867a1f502614e3d8523",
     "https://deno.land/std@0.213.0/dotenv/parse.ts": "55d5d1a5ba76c1324e6dc2f2f7917f03c47e5da5c2c55af11fd0fe2d6a3d3a2e",
-    "https://deno.land/std@0.213.0/dotenv/stringify.ts": "0047ad7068289735d08964046aea267a750c141b494ca0e38831b89be6c020c2"
+    "https://deno.land/std@0.213.0/dotenv/stringify.ts": "0047ad7068289735d08964046aea267a750c141b494ca0e38831b89be6c020c2",
+    "https://deno.land/x/ulid@v0.3.0/mod.ts": "f7ff065b66abd485051fc68af23becef6ccc7e81f7774d7fcfd894a4b2da1984"
   }
 }

@@ -1,5 +1,5 @@
 import { REST } from "npm:@discordjs/rest@^2.2.0";
-import { globals, DC, members, isMember } from "./core.ts";
+import { globals, DC, members, isMember, ulid } from "./core.ts";
 
 const { BOT_TOKEN, APPLICATION_ID } = globals;
 const rest = new REST({ version: "10" }).setToken(BOT_TOKEN);
@@ -38,4 +38,9 @@ export async function sendMessageAs(interactionToken: string, channel: string, m
   await rest.delete(DC.Routes.webhook(id, token));
   // delete replied message after 2 seconds
   await kv.enqueue(interactionToken, { delay: 2000 });
+}
+
+// save the message for 30 days
+export async function logMessage(guild: string, channel: string, user: string, content: string): Promise<void> {
+  await kv.set(["log", guild, ulid()], JSON.stringify({ channel, user, content }), { expireIn: 1000 * 86400 * 30 });
 }

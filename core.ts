@@ -1,6 +1,8 @@
 export * as DC from "npm:discord-api-types@^0.37.67/v10";
 export { verifyKey } from "npm:discord-interactions@^3.4.0";
 
+import { monotonicFactory } from "https://deno.land/x/ulid/mod.ts";
+export const ulid = monotonicFactory();
 // globals
 import { load } from "https://deno.land/std@0.213.0/dotenv/mod.ts";
 await load({ export: true });

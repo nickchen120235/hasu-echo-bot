@@ -1,5 +1,5 @@
 import { verifyKey, globals, DC, isMember } from "./core.ts";
-import { sendMessageAs } from "./discord.ts";
+import { sendMessageAs, logMessage } from "./discord.ts";
 
 function verifyRequest(body: string, signature: string, timestamp: string): boolean {
   const { BOT_KEY } = globals;
@@ -33,6 +33,7 @@ Deno.serve(async (req) => {
       if (!isMember(name))
         return createResponse(400, { error: "Invalid command" });
       else {
+        await logMessage(interaction.guild_id ?? "Unknown Guild", interaction.channel.name ?? "Unknown Channel", interaction.user?.id ?? "Unknown User", content);
         await sendMessageAs(interaction.token, interaction.channel.id, name, content);
         return createResponse(200, {
           type: DC.InteractionResponseType.ChannelMessageWithSource,
